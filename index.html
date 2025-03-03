@@ -4,8 +4,14 @@
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
     
-    <script type="text/javascript" src="/ak-push.js"></script>
-    <link rel="manifest" href="/manifest.json"></link>
+
+
+   <!-- подключение PUSH SDK -->
+   <script type="text/javascript" src="./push_acc2/ak-push.js"></script>
+   <link rel="manifest" href="./push_acc2/manifest.json">
+
+    <!-- <script type="text/javascript" src="/ak-push.js"></script> -->
+    <!-- <link rel="manifest" href="/manifest.json"></link> -->
    
    <script>
         (function (window, document, dataLayerName, containerID) {
@@ -86,6 +92,7 @@
    </script> -->
 </head>
 
+
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;">
     
     <header style="background-color: #f2f2f2; padding: 20px; text-align: center;">
@@ -120,6 +127,20 @@
         </section>
     <!-- END OF FORM CODE PART      -->
 
+    <div class="container">
+        <h1>Get web push</h1>
+        <p>Введите email для матчинга на платформе:</p>
+        <input type="text" id="email_input" placeholder="email">
+
+        <!-- Кнопка подписки -->
+        <button type="button" id="init_sub">PUSH - подписка</button>
+        
+        <script>
+            document.getElementById('init_sub').addEventListener('click', () => {
+                new AKPush().initSubscription({ email: document.getElementById('email_input').value.trim() })
+            });
+        </script>
+    </div>
 
         <section style="margin-bottom: 40px;">
             <h2>Раздел 3: Галерея изображений</h2>

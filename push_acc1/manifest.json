@@ -1,0 +1,5 @@
+{
+  "permissions": [ "activeTab" ],
+  "name": "https://oden333.github.io",
+  "display": "standalone"
+}

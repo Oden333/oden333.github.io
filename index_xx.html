@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+    
+
+
+   <!-- подключение PUSH SDK -->
+   <script type="text/javascript" src="./push_acc2/ak-push.js"></script>
+   <link rel="manifest" href="./push_acc2/manifest.json">
+
+    <!-- <script type="text/javascript" src="./push_acc1/ak-push.js"></script> -->
+    <!-- <link rel="manifest" href="./push_acc1/manifest.json"></link> -->
+
+<!-- START OF ALTCRAFT PIXEL CODE !-->
+<!-- <script type="text/javascript">
+    !function(){var e={url:"https://pxl.ismail-galimov.dev.altkraft.com/pixel?k=wy0N2ngwo8aRXRFeKR2HXNilEE6s7hdf4Ydb83Awh8ElcYo5R%2BuWcg%3D%3D&s=XZCMwL8NN%2B8%3D",goals:"",value:parseFloat("0"),timeout:parseInt("0"),after_scroll:JSON.parse("false"),auto_load:JSON.parse("true")},o=function(o,t,n,a){var d=[].concat(o).map(function(e){return encodeURIComponent(e)}).join(","),c=encodeURIComponent(String(t||0)),i=encodeURIComponent(n.matching_mode||""),r=encodeURIComponent(n.db_id||0),u=encodeURIComponent(JSON.stringify(n.match||{})),l=encodeURIComponent(JSON.stringify(n.update||{}));setTimeout(function(){(new Image).src=[e.url,"goals="+d,"value="+c,"db_id="+r,"mmode="+i,"match="+u,"update="+l].join("&")},a)},t=!1,n=function(){t||(t=!0,e.after_scroll?document.addEventListener("scroll",function(){(window.pageYOffset||document.documentElement.scrollTop>0)&&o(e.goals,e.value,{},e.timeout)},{once:true}):e.auto_load&&o(e.goals,e.value,{},e.timeout))};"complete"===document.readyState||"interactive"===document.readyState?n():window.addEventListener("load",n);window.ak_pixel_push=function(e,t,n,a,d,c){var i=[];Array.isArray(e)?i=e:i[0]=e,o(i,t,{match:n,update:a,matching_mode:d,db_id:c},0)}}();
+   </script> -->
+ <!--  END OF ALTCRAFT PIXEL CODE !-->
+
+
+
+ <!-- <script>
+            
+    (function (popupFunc) {
+           var script = document.createElement('script');
+           var firstScript = document.getElementsByTagName('script')[0];
+           var popupFuncName = popupFunc !== 'acpopup' ? '?f=' + popupFunc : '';
+           window[popupFunc] = window[popupFunc] || function () {
+               (window[popupFunc].actions = window[popupFunc].actions || []).push(arguments);
+           };
+           window[popupFunc].last_init = 1 * new Date()
+           script.async = true;
+           script.src = 'https://pxl.ismail-galimov.dev.altkraft.com' + '/popup/v1/js/popupLibrary.js' + popupFuncName;
+           firstScript.parentNode.insertBefore(script, firstScript);
+    })('acpopup');
+
+   </script> -->
+   
+   <!-- <script>
+        acpopup('create', 'AP-5Ddq3bA97mz__vPZH',{
+                    matching: {
+                        matching_mode: 'profile_id',
+                        matching: { 
+                            profile_id: '668e73dc4c33ebb60645638c', 
+                            db_id:2 
+                            }
+                        }
+                    });
+        acpopup('show', 'AP-5Ddq3bA97mz__vPZH',{
+                    matching: {
+                        matching_mode: 'profile_id',
+                        matching: { 
+                            profile_id: '668e73dc4c33ebb60645638c', 
+                            db_id:2 
+                            }
+                        }
+                    });
+   </script> -->
+   <style>
+        .body {
+            margin: 0;
+            padding: 0 !important;
+            mso-line-height-rule: exactly;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+   </style>
+</head>
+
+
+<body class="body">
+    <!-- START OF FORM CODE PART    -->
+        <section style="margin-bottom: 40px;">
+            <h2>Контактная форма</h2>
+            <p>Заполните форму ниже, чтобы связаться с нами:</p>
+            <button onclick="showForm()" style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; cursor: pointer;">Открыть форму</button>
+            <div id="contact-form" style="display: none; margin-top: 20px;">
+                <!-- 
+                <script src=https://pxl.ismail-galimov.dev.altkraft.com/form/js/embed_v1.js></script>
+                <iframe src="https://pxl.ismail-galimov.dev.altkraft.com/form?form=8eKhsfUifoRQpJMhHZgxP8M99xBoQHdR6YxDX9jpBZDXFzc2kyjm18TtenYEpQtkYYtNeuvywdix9&iframe=1" frameborder="0" name="ak-form-8eKhsfUifoRQpJMhHZgxP8M99xBoQHdR6YxDX9jpBZDXFzc2kyjm18TtenYEpQtkYYtNeuvywdix9" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
+                -->
+
+
+                <!-- 
+                <script src=https://pxl.ismail-galimov.dev.altkraft.com/form/js/embed_v1.js></script>
+                <iframe src="https://pxl.ismail-galimov.dev.altkraft.com/form?form=9FmjVvBYJ5hNt8Z93XPbpswuCjphqKBdPfRXvZQ5zDGKFgsV8sKWcgCDRaqfYga7NJaQG4RtwVLhEqH77VAYLpcB&iframe=1" frameborder="0" name="ak-form-9FmjVvBYJ5hNt8Z93XPbpswuCjphqKBdPfRXvZQ5zDGKFgsV8sKWcgCDRaqfYga7NJaQG4RtwVLhEqH77VAYLpcB" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
+                -->
+            
+            </div>
+                
+
+        </section>
+    <!-- END OF FORM CODE PART      -->
+
+    <div class="container">
+        <h1>Get web push</h1>
+        <p>Введите email для матчинга на платформе:</p>
+        <input type="text" id="email_input" placeholder="email">
+        <input type="text" id="db_id" placeholder="db_id" width="6px">
+
+        <br><input type="text" id="fname" placeholder="fname">
+
+        <!-- Кнопка подписки -->
+        <button type="button" style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; cursor: pointer;" id="init_sub">PUSH - подписка</button>
+        
+        <script>
+            document.getElementById('init_sub').addEventListener('click', () => {
+                new AKPush().initSubscription({ email: document.getElementById('email_input').value.trim() })
+            });
+        </script>
+    </div>
+
+    <div class="UpdateSub-container">
+        <p>Update subscribe:</p>
+        <input type="checkbox" id="inexclusive">inexclusive<br>
+        <button type="button" style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; cursor: pointer;" id="update_sub">Обновление подписки</button>
+        <script>    
+            document.getElementById('update_sub').addEventListener('click', function() {
+                const email = (document.getElementById('email_input').value.trim() == "") ? 'test@qa.altcraft.com': document.getElementById('email_input').value.trim()  
+                
+                window.email = email
+                console.log(window.email)
+                
+                const fname = (document.getElementById('fname').value.trim() == "") ? "Cool" : document.getElementById('fname').value.trim()
+                // const lname = (document.getElementById('lname').value.trim() == "") ? "Tester" : document.getElementById('lname').value.trim()
+
+                // определяем id базы для записи. Пытаемся преобразовать в массив чисел. Если ничего не передано, подставляем числовой литерал `1`
+                const db_id = (document.getElementById('db_id').value != "" ? document.getElementById('db_id').value.split(',').map(Number) : 1)
+                
+                const inexclusive = document.getElementById('inexclusive').checked
+
+                console.log(">>> inexclusive state is - " + inexclusive)
+                new AKPush().updateSubscription(
+                    { 
+                        db: db_id,
+                        email: window.email
+                    },
+                    {
+                        _fname: fname
+                        // _lname: lname
+                    }, 
+                    {
+                        inexclusive: inexclusive // нужно ли приостанавливать все подписки на ресурс с текущим токеном браузера у остальных профилей
+                    }
+                )
+            });
+        </script>
+    </div>
+
+    <!--         
+    <section style="margin-bottom: 40px;">
+            <h2>Пуш</h2>
+            <div class="container">
+
+                <p>ПШОД Подпишись:</p>
+                
+                <input type="text" id="nameInput" placeholder="Ваше имя">
+    
+            
+                <button type="button" id="init_sub">PUSH - подписка</button>
+                
+                <script>
+                    document.getElementById('init_sub').addEventListener('click', () => {
+                        akpush.initSubscription({ email: document.getElementById('nameInput').value.trim()})
+                    });
+                </script>
+            </div>
+        </section> 
+    -->
+</body>
+
+     
+    
+</html>

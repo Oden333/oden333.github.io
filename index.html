@@ -104,7 +104,7 @@
         <input type="text" id="email_input" placeholder="email">
 
         <!-- Кнопка подписки -->
-        <button type="button" id="init_sub">PUSH - подписка</button>
+        <button type="button" style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; cursor: pointer;" id="init_sub">PUSH - подписка</button>
         
         <script>
             document.getElementById('init_sub').addEventListener('click', () => {
@@ -116,7 +116,7 @@
     <div class="UpdateSub-container">
         <p>Update subscribe:</p>
         <input type="checkbox" id="inexclusive">inexclusive<br>
-        <button type="button" id="update_sub">Обновление подписки</button>
+        <button type="button" style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; cursor: pointer;" id="update_sub">Обновление подписки</button>
         <script>    
             document.getElementById('update_sub').addEventListener('click', function() {
                 const email = (document.getElementById('email_input').value.trim() == "") ? 'test@qa.altcraft.com': document.getElementById('email_input').value.trim()  

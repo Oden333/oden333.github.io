@@ -112,14 +112,14 @@
             });
         </script>
     </div>
-    
+
     <div class="UpdateSub-container">
         <p>Update subscribe:</p>
         <input type="checkbox" id="inexclusive">inexclusive<br>
         <button type="button" id="update_sub">Обновление подписки</button>
         <script>    
             document.getElementById('update_sub').addEventListener('click', function() {
-                const email = (document.getElementById('emailInput').value.trim() == "") ? 'test@qa.altcraft.com': document.getElementById('emailInput').value.trim()  
+                const email = (document.getElementById('email_input').value.trim() == "") ? 'test@qa.altcraft.com': document.getElementById('email_input').value.trim()  
                 
                 window.email = email
                 console.log(window.email)

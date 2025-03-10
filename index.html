@@ -86,10 +86,8 @@
         <p>Subscribe:</p>
         <button type="button" id="init_sub">PUSH - подписка</button>
         <script>
+            push = new AKPush();
             document.getElementById('init_sub').addEventListener('click', function () {
-
-                push = new AKPush();
-
                 const email = (document.getElementById('emailInput').value.trim() == "") ? 'test@qa.altcraft.com' : document.getElementById('emailInput').value.trim()
 
                 console.log(email)

@@ -134,7 +134,7 @@
                 const inexclusive = document.getElementById('inexclusive').checked
 
                 console.log(">>> inexclusive state is - " + inexclusive)
-                AKPush().updateSubscription(
+                new AKPush().updateSubscription(
                     { 
                         db: db_id,
                         email: window.email

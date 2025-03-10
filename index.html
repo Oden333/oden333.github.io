@@ -124,8 +124,8 @@
                 window.email = email
                 console.log(window.email)
                 
-                const fname = (document.getElementById('fname').value.trim() == "") ? "Cool" : document.getElementById('fname').value.trim()
-                const lname = (document.getElementById('lname').value.trim() == "") ? "Tester" : document.getElementById('lname').value.trim()
+                // const fname = (document.getElementById('fname').value.trim() == "") ? "Cool" : document.getElementById('fname').value.trim()
+                // const lname = (document.getElementById('lname').value.trim() == "") ? "Tester" : document.getElementById('lname').value.trim()
 
                 // определяем id базы для записи. Пытаемся преобразовать в массив чисел. Если ничего не передано, подставляем числовой литерал `1`
                 const db_id = (document.getElementById('db_id').value != "" ? document.getElementById('db_id').value.split(',').map(Number) : 1)
@@ -138,10 +138,10 @@
                         db: db_id,
                         email: window.email
                     },
-                    {
-                        _fname: fname,
-                        _lname: lname
-                    }, 
+                    // {
+                    //     _fname: fname,
+                    //     _lname: lname
+                    // }, 
                     {
                         inexclusive: inexclusive // нужно ли приостанавливать все подписки на ресурс с текущим токеном браузера у остальных профилей
                     }

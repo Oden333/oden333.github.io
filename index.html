@@ -12,8 +12,8 @@
 
 <body>
 
+     <!-- подключение попапа -->
     <script>
-        
         (function (popupFunc) {
             var script = document.createElement('script');
             var firstScript = document.getElementsByTagName('script')[0];
@@ -26,13 +26,23 @@
             script.src = 'https://pxl.ismail-galimov.dev.altkraft.com' + '/popup/v1/js/popupLibrary.js' + popupFuncName;
             firstScript.parentNode.insertBefore(script, firstScript);
         })('acpopup');
-
     </script>
-    <script>
-        
-    acpopup('create', 'AP-27iSJHqJ8z9ww4llB');
-    acpopup('show', 'AP-27iSJHqJ8z9ww4llB');
 
+    <button onclick="showPopupClick()">Показать попап</button>
+    
+    <script>
+        const popup_id = 'AP-27iSJHqJ8z9ww4llB'
+    
+        function showPopupClick() {
+            acpopup('create', popup_id,{
+                                    matching_mode: 'email',         
+                                    matching: {         
+                                        email: 'testmail@mail.ru',          
+                                        db_ids: [3]         
+                                    },          
+                                        });                 
+            acpopup('show', popup_id);
+        }
     </script>
 
     <div class="UpdateData">

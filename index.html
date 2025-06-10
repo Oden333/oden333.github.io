@@ -34,11 +34,11 @@
         const popup_id = 'AP-27iSJHqJ8z9ww4llB'
     
         function showPopupClick() {
-            acpopup('create', popup_id,{
+            acpopup('create', popup_id, {
                                     matching_mode: 'email_profile',         
                                     matching: {         
                                         email: 'testmail@mail.ru',          
-                                        db_ids: [3]         
+                                        db_id: 3        
                                     },          
                                         });                 
             acpopup('show', popup_id);

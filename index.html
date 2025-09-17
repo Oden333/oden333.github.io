@@ -73,18 +73,14 @@
         <button type="button" id="init_sub">PUSH - подписка</button>
         <script>    
             document.getElementById('init_sub').addEventListener('click', function() {
-
                 push = new AKPush();
 
-                const email = (document.getElementById('emailInput').value.trim() == "") ? 'test@qa.altcraft.com': document.getElementById('emailInput').value.trim()  
-                
-                console.log(email)
-                
+                const email = (document.getElementById('emailInput').value.trim() == "") ? 'test@qa.altcraft.com': document.getElementById('emailInput').value.trim()                 
                 const fname = (document.getElementById('fname').value.trim() == "") ? "Cool" : document.getElementById('fname').value.trim()
                 const lname = (document.getElementById('lname').value.trim() == "") ? "Tester" : document.getElementById('lname').value.trim()
-
-                // определяем id базы для записи. Пытаемся преобразовать в массив чисел. Если ничего не передано, подставляем числовой литерал `1`
                 const db_id = (document.getElementById('db_id').value != "" ? document.getElementById('db_id').value.split(',').map(Number) : 1)
+
+                console.log(email, db_id)
 
                 push.initSubscription(
                     { 
@@ -102,7 +98,8 @@
 
     <div class="UpdateSub-container">
         <p>Update subscribe:</p>
-        <input type="checkbox" id="inexclusive">inexclusive<br>
+        Inex<br>
+        <input type="checkbox" id="inexclusive">
         <button type="button" id="update_sub">Обновление подписки</button>
         <script>    
             document.getElementById('update_sub').addEventListener('click', function() {

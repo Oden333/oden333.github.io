@@ -195,7 +195,10 @@
         <script>
         (function (window, document, dataLayerName, containerID) {
             window[dataLayerName] = window[dataLayerName] || [];
-            window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+            window[dataLayerName].push(
+                { 'start': new Date().getTime(), event: 'actm-js' },
+                { 'matching':   { 'matching_mode': 'acid' } },
+            );
             var firstScript = document.getElementsByTagName('script')[0];
             var script = document.createElement('script');
             var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
@@ -204,11 +207,11 @@
             script.type = 'module';
             if (firstScript && firstScript.parentNode) {
                 firstScript.parentNode.insertBefore(script, firstScript);
-            }
+            }       
         }(window, document, 'acDataLayer', 'ATM-4AyvrhdrVuuLNRdG'));
         </script>
     </div>
-    
+
 </body>
 
 </html>

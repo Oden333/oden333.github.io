@@ -195,10 +195,11 @@
         <script>
         (function (window, document, dataLayerName, containerID) {
             window[dataLayerName] = window[dataLayerName] || [];
-            window[dataLayerName].push(
-                { 'start': new Date().getTime(), event: 'actm-js' },
-                { 'matching':   { 'matching_mode': 'acid' } },
-            );
+            window[dataLayerName].push({
+                'start': new Date().getTime(), 
+                event: 'actm-js',
+                'matching':   { 'matching_mode': 'acid' } 
+            });
             var firstScript = document.getElementsByTagName('script')[0];
             var script = document.createElement('script');
             var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';

@@ -17,75 +17,9 @@
 
 
     <!-- подключение попапа -->
-    <div class="Popup container">
-    <button onclick="showPopupClick()">Показать попап</button>
-    <script>
-        // Загружаем библиотеку только когда нужно
-        function loadPopupLibrary() {
-            return new Promise((resolve) => {
-                if (window.acpopup) {
-                    resolve();
-                    return;
-                }
-                var script = document.createElement('script');
-                script.src = 'https://pxl-leeeroooyjenkins.dev.altcraft.com/popup/v1/js/popupLibrary.js';
-                script.onload = resolve;
-                document.head.appendChild(script);
-            });
-        }
-        
-        const popup_id = 'AP-27iSJHqJ8z9ww4llB';
-    
-        async function showPopupClick() {
-            await loadPopupLibrary();
-            acpopup('create', popup_id, {
-                matching_mode: 'email_profile',         
-                matching: {         
-                    email: 'testmail@mail.ru',          
-                    db_id: 3        
-                },          
-            });                 
-            acpopup('show', popup_id);
-        }
-    </script>
-</div>
-    
-    <!-- 
-<div class="Popup container">
-    <script>
-        (function (popupFunc) {
-            var script = document.createElement('script');
-            var firstScript = document.getElementsByTagName('script')[0];
-            var popupFuncName = popupFunc !== 'acpopup' ? '?f=' + popupFunc : '';
-            window[popupFunc] = window[popupFunc] || function () {
-                (window[popupFunc].actions = window[popupFunc].actions || []).push(arguments);
-            };
-            window[popupFunc].last_init = 1 * new Date()
-            script.async = true;
-            script.src = 'https://pxl-leeeroooyjenkins.dev.altcraft.com' + '/popup/v1/js/popupLibrary.js' + popupFuncName;
-            firstScript.parentNode.insertBefore(script, firstScript);
-        })('acpopup');
-    </script>
-    <button onclick="showPopupClick()">Показать попап</button>
-    <script>
-        const popup_id = 'AP-27iSJHqJ8z9ww4llB'
-    
-        function showPopupClick() {
-            acpopup('create', popup_id, {
-                                    matching_mode: 'email_profile',         
-                                    matching: {         
-                                        email: 'testmail@mail.ru',          
-                                        db_id: 3        
-                                    },          
-                                        });                 
-            acpopup('show', popup_id);
-        }
-    </script>
-    </div> 
-    -->
 
 
- <!-- подключение контейнера тег менеджера c попапом-->
+    <!-- подключение контейнера тег менеджера c попапом-->
     <div class="AKTM - container c попапом">
         <script>
         (function (window, document, dataLayerName, containerID) {

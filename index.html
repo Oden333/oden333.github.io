@@ -11,12 +11,47 @@
 
 <body>
 
-     <!-- подключение формы -->
+    <!-- подключение формы -->
     <script src=https://pxl-q44qzcsf9tqqhde3.dev.altcraft.com/form/js/embed_v1.js></script>
     <iframe src="https://pxl-q44qzcsf9tqqhde3.dev.altcraft.com/form?form=er8oZxybs2bw7Vu3yfNAkyJvtqixKYs1kfFLZE4S6kZsrbUWF5aMkoRgXzujjibpeSN4KWV4wrruP&iframe=1" frameborder="0" name="ak-form-er8oZxybs2bw7Vu3yfNAkyJvtqixKYs1kfFLZE4S6kZsrbUWF5aMkoRgXzujjibpeSN4KWV4wrruP" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
 
-     <!-- подключение попапа -->
+
+    <!-- подключение попапа -->
     <div class="Popup container">
+    <button onclick="showPopupClick()">Показать попап</button>
+    <script>
+        // Загружаем библиотеку только когда нужно
+        function loadPopupLibrary() {
+            return new Promise((resolve) => {
+                if (window.acpopup) {
+                    resolve();
+                    return;
+                }
+                var script = document.createElement('script');
+                script.src = 'https://pxl-leeeroooyjenkins.dev.altcraft.com/popup/v1/js/popupLibrary.js';
+                script.onload = resolve;
+                document.head.appendChild(script);
+            });
+        }
+        
+        const popup_id = 'AP-27iSJHqJ8z9ww4llB';
+    
+        async function showPopupClick() {
+            await loadPopupLibrary();
+            acpopup('create', popup_id, {
+                matching_mode: 'email_profile',         
+                matching: {         
+                    email: 'testmail@mail.ru',          
+                    db_id: 3        
+                },          
+            });                 
+            acpopup('show', popup_id);
+        }
+    </script>
+</div>
+    
+    <!-- 
+<div class="Popup container">
     <script>
         (function (popupFunc) {
             var script = document.createElement('script');
@@ -46,11 +81,12 @@
             acpopup('show', popup_id);
         }
     </script>
-    </div>
+    </div> 
+    -->
 
 
  <!-- подключение контейнера тег менеджера c попапом-->
-    <!-- <div class="AKTM - container c попапом">
+    <div class="AKTM - container c попапом">
         <script>
         (function (window, document, dataLayerName, containerID) {
             window[dataLayerName] = window[dataLayerName] || [];
@@ -70,7 +106,7 @@
             }       
         }(window, document, 'acDataLayer', 'ATM-4AyvrhdrVuuLNRdG'));
         </script>
-    </div> -->
+    </div>
 
 
 

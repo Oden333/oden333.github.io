@@ -48,9 +48,9 @@
     </script>
     </div>
 
-    
- <!-- подключение контейнера тег менеджера -->
-    <div class="AKTM - container">
+
+ <!-- подключение контейнера тег менеджера c попапом-->
+    <!-- <div class="AKTM - container c попапом">
         <script>
         (function (window, document, dataLayerName, containerID) {
             window[dataLayerName] = window[dataLayerName] || [];
@@ -70,11 +70,32 @@
             }       
         }(window, document, 'acDataLayer', 'ATM-4AyvrhdrVuuLNRdG'));
         </script>
-    </div>
+    </div> -->
 
 
 
  <!-- подключение пушей -->
+
+    <div class="PermissonData-container">
+        <button type="button" id="permission_status">Permissons status to log</button>
+        <script>
+            document.getElementById('permission_status').addEventListener('click', function() {
+                const websitePushID = "web.com.altcraft.qa.webpush-et5eeghie0lae7ma";
+                
+                console.log("=== Push Notification Permissions ===");
+
+                console.log("Notification.permission:", Notification.permission);
+                
+                if ('safari' in window && 'pushNotification' in window.safari) {
+                    const permissionData = window.safari.pushNotification.permission(websitePushID);
+                    console.log("safari.pushNotification.permission:");
+                    console.log("  permission:", permissionData.permission);
+                    console.log("  deviceToken:", permissionData.deviceToken || "No token available");
+                    console.log("  reason:", permissionData.reason || "No reason provided");
+                }
+            });
+        </script>
+    </div>
 
     <div class="UpdateData">
         <input type="text" id="emailInput" placeholder="test@qa.altcraft.com">email для матчинга<br>
@@ -180,27 +201,6 @@
         <script>
             document.getElementById('remove_token').addEventListener('click', function() {
                 push.removeToken() // сбросить токен
-            });
-        </script>
-    </div>
-
-    <div class="PermissonData-container">
-        <button type="button" id="permission_status">Permissons status to log</button>
-        <script>
-            document.getElementById('permission_status').addEventListener('click', function() {
-                const websitePushID = "web.com.altcraft.qa.webpush-et5eeghie0lae7ma";
-                
-                console.log("=== Push Notification Permissions ===");
-
-                console.log("Notification.permission:", Notification.permission);
-                
-                if ('safari' in window && 'pushNotification' in window.safari) {
-                    const permissionData = window.safari.pushNotification.permission(websitePushID);
-                    console.log("safari.pushNotification.permission:");
-                    console.log("  permission:", permissionData.permission);
-                    console.log("  deviceToken:", permissionData.deviceToken || "No token available");
-                    console.log("  reason:", permissionData.reason || "No reason provided");
-                }
             });
         </script>
     </div>

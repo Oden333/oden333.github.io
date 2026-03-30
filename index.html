@@ -7,12 +7,16 @@
     <!-- подключение PUSH SDK -->
     <script type="text/javascript" src="/ak-push.js"></script>
     <link rel="manifest" href="/manifest.json"></link>
-    
 </head>
 
 <body>
 
+     <!-- подключение формы -->
+    <script src=https://pxl-q44qzcsf9tqqhde3.dev.altcraft.com/form/js/embed_v1.js></script>
+    <iframe src="https://pxl-q44qzcsf9tqqhde3.dev.altcraft.com/form?form=er8oZxybs2bw7Vu3yfNAkyJvtqixKYs1kfFLZE4S6kZsrbUWF5aMkoRgXzujjibpeSN4KWV4wrruP&iframe=1" frameborder="0" name="ak-form-er8oZxybs2bw7Vu3yfNAkyJvtqixKYs1kfFLZE4S6kZsrbUWF5aMkoRgXzujjibpeSN4KWV4wrruP" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
+
      <!-- подключение попапа -->
+    <div class="Popup container">
     <script>
         (function (popupFunc) {
             var script = document.createElement('script');
@@ -27,15 +31,7 @@
             firstScript.parentNode.insertBefore(script, firstScript);
         })('acpopup');
     </script>
-
     <button onclick="showPopupClick()">Показать попап</button>
-
-    
-     <!-- подключение формы -->
-    <script src=https://pxl-q44qzcsf9tqqhde3.dev.altcraft.com/form/js/embed_v1.js></script>
-    <iframe src="https://pxl-q44qzcsf9tqqhde3.dev.altcraft.com/form?form=er8oZxybs2bw7Vu3yfNAkyJvtqixKYs1kfFLZE4S6kZsrbUWF5aMkoRgXzujjibpeSN4KWV4wrruP&iframe=1" frameborder="0" name="ak-form-er8oZxybs2bw7Vu3yfNAkyJvtqixKYs1kfFLZE4S6kZsrbUWF5aMkoRgXzujjibpeSN4KWV4wrruP" class="ak-form" width="100%" sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation"></iframe>
-
-
     <script>
         const popup_id = 'AP-27iSJHqJ8z9ww4llB'
     
@@ -50,7 +46,9 @@
             acpopup('show', popup_id);
         }
     </script>
+    </div>
 
+    
  <!-- подключение контейнера тег менеджера -->
     <div class="AKTM - container">
         <script>
